@@ -7,16 +7,18 @@ def meilleur_cafe():
         (" Dunkin ’␣ Donuts ", 0.8, 6)
     ]
 
-    meilleur_choix = None
-    ratio_distance = 10
+    meilleur_choix = []
+    RATIO_DISTANCE = 10
+    IND_NOM = 0
+    IND_DISTANCE = 1
+    IND_QUALITE = 2
+
 
     for i in range(0, len(choix)):
-        for j in range(1, len(choix[i])):
-            #print(choix[i][j], end=" ")
-            cote = choix[i][1] * ratio_distance + choix[i][2]
-            if cote
+        cote = choix[i][IND_DISTANCE] * RATIO_DISTANCE + choix[i][IND_QUALITE]
+        meilleur_choix.append(cote)
 
-
+    print(f' Le ␣ meilleur ␣ cafe ␣ est ␣ {choix[meilleur_choix.index(max(meilleur_choix))][IND_NOM]}. ')
 
 if __name__ == "__main__":
 
